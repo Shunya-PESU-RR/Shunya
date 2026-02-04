@@ -14,12 +14,10 @@ export default function Navigation() {
   ];
 
   return (
-    <nav className="fixed top-0 left-0 bottom-0 w-64 bg-white dark:bg-gray-950 border-r border-gray-200 dark:border-gray-800 z-50 flex flex-col transition-colors duration-300">
+    <nav className="fixed top-0 left-0 bottom-0 w-64 surface border-r z-50 flex flex-col transition-colors duration-300">
+      
       <div className="p-8">
-        <Link
-          to="/"
-          className="text-3xl font-bold text-[#4F7FFF] tracking-tight"
-        >
+        <Link to="/" className="text-3xl font-bold tracking-tight">
           SHUNYA
         </Link>
       </div>
@@ -32,8 +30,8 @@ export default function Navigation() {
               to={link.path}
               className={`px-4 py-3 rounded-lg font-semibold transition-colors ${
                 location.pathname === link.path
-                  ? "bg-[#4F7FFF] text-white"
-                  : "text-gray-700 hover:bg-gray-100"
+                  ? "bg-[var(--accent)] text-[var(--accent-on)]"
+                  : "hover:bg-black/5 dark:hover:bg-white/10"
               }`}
             >
               {link.name}
@@ -42,11 +40,10 @@ export default function Navigation() {
         </div>
       </div>
 
-      <div className="p-6 border-t border-gray-200">
+      <div className="p-6 border-t">
         <button
           onClick={toggleTheme}
-          className="w-full px-4 py-3 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center gap-2"
-          aria-label="Toggle theme"
+          className="w-full px-4 py-3 rounded-lg transition-colors flex items-center justify-center gap-2"
         >
           {theme === "light" ? (
             <>
@@ -61,6 +58,7 @@ export default function Navigation() {
           )}
         </button>
       </div>
+
     </nav>
   );
 }

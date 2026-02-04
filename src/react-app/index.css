@@ -9,15 +9,155 @@
 
   body {
     @apply antialiased;
-    font-family: 'outfit', system-ui, -apple-system, sans-serif;
-    background-color: white;
-  }
-
-  .font-serif {
-    font-family: 'STIX Two Text', 'Inter', serif;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+      Roboto, Helvetica, Arial, sans-serif;
+    background-color: var(--page-bg);
+    color: var(--text-default);
   }
 }
 
-html, body {
+html,
+body {
   height: 100%;
+}
+
+:root {
+  --surface: #ffffff;
+  --page-bg: #ffffff;
+  --text-default: #0f172a;
+  --muted: #475569;
+  --accent: #3b63e6;
+  --accent-on: #ffffff;
+  --explosion-bg: #ffffff;
+}
+
+.dark {
+  --surface: #0b1020;
+  --page-bg: #060a14;
+  --text-default: #e6eefc;
+  --muted: #94a3b8;
+  --accent: #6a8dff;
+  --accent-on: #0b1020;
+  --explosion-bg: #05080f;
+}
+
+@keyframes drift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.dark body {
+  background: linear-gradient(
+    120deg,
+    #05080f,
+    #0a0f1f,
+    #060a14
+  );
+  background-size: 300% 300%;
+  animation: drift 60s ease infinite;
+}
+
+.page {
+  background-color: transparent;
+  animation: fadeUp 0.6s ease forwards;
+  will-change: opacity, transform;
+}
+
+.surface,
+nav {
+  background-color: var(--surface);
+  color: var(--text-default);
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: var(--accent-on);
+}
+
+.btn-primary:hover {
+  filter: brightness(0.95);
+}
+
+.btn-outline {
+  background-color: transparent;
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.btn-outline:hover {
+  background-color: var(--accent);
+  color: var(--accent-on);
+}
+
+button {
+  position: relative;
+  overflow: hidden;
+}
+
+button::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.06);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
+}
+
+button:hover::after {
+  transform: scaleX(1);
+}
+
+.hero-title {
+  letter-spacing: 0.08em;
+  animation: settle 1.2s ease-out forwards;
+}
+
+@keyframes settle {
+  from {
+    letter-spacing: 0.18em;
+    opacity: 0.7;
+  }
+  to {
+    letter-spacing: 0.08em;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.theme-explosion {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  background: var(--explosion-bg);
+  animation: explode 0.6s ease-out forwards;
+}
+
+@keyframes explode {
+  from {
+    clip-path: circle(0% at 50% 50%);
+  }
+  to {
+    clip-path: circle(150% at 50% 50%);
+  }
+}
+
+p {
+  line-height: 1.6;
 }
