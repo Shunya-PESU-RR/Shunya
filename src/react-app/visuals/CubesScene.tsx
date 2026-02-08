@@ -21,7 +21,7 @@ export default function CubesScene() {
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0 pointer-events-none">
+    <div className="absolute inset-0 z-0">
       <Cubes
         gridSize={gridSize}
         maxAngle={45}
@@ -30,8 +30,8 @@ export default function CubesScene() {
         faceColor="rgba(255, 255, 255, 0.03)"
         rippleColor="#0070f3"
         rippleSpeed={1.5}
-        autoAnimate
-        rippleOnClick
+        autoAnimate={false}
+        rippleOnClick={true}
       />
     </div>
   );

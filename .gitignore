@@ -2,3 +2,7 @@ node_modules
 dist
 .env
 lighthouse-report.json
+
+# SSH keys
+is
+is.pub

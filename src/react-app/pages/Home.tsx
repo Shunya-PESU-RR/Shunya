@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import DecryptedText from "../components/DecryptedText";
-import CubesScene from "../visuals/CubesScene";
+import VoidScene from "../visuals/VoidScene";
 import PageLayout from "../components/PageLayout";
 import GlassCard from "../components/GlassCard";
 import Logo from "../components/Logo";
@@ -11,7 +11,7 @@ export default function Home() {
     <PageLayout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4">
-        <CubesScene />
+        <VoidScene />
 
         <div className="relative z-10 max-w-4xl mx-auto w-full">
           <motion.div
