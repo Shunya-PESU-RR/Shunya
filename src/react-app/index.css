@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,155 +11,208 @@
 
   body {
     @apply antialiased;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    font-family: 'Space Grotesk', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
       Roboto, Helvetica, Arial, sans-serif;
     background-color: var(--page-bg);
     color: var(--text-default);
+    overflow-x: hidden;
   }
-}
-
-html,
-body {
-  height: 100%;
 }
 
 :root {
+  /* Light Theme - Clean White with Purple/Blue accents */
   --surface: #ffffff;
-  --page-bg: #ffffff;
-  --text-default: #0f172a;
-  --muted: #475569;
-  --accent: #3b63e6;
+  --surface-glass: rgba(255, 255, 255, 0.75);
+  --page-bg: #fafafa;
+  --text-default: #0a0a0a;
+  --muted: #3f3f46;
+  /* Darker gray for better readability */
+  --accent: #7c3aed;
+  /* Purple */
+  --accent-secondary: #3b82f6;
+  /* Blue */
+  --accent-glow: rgba(124, 58, 237, 0.4);
   --accent-on: #ffffff;
-  --explosion-bg: #ffffff;
+  --border: rgba(0, 0, 0, 0.12);
 }
 
 .dark {
-  --surface: #0b1020;
-  --page-bg: #060a14;
-  --text-default: #e6eefc;
-  --muted: #94a3b8;
-  --accent: #6a8dff;
-  --accent-on: #0b1020;
-  --explosion-bg: #05080f;
+  /* Dark Theme - Deep Black with Purple/Blue accents */
+  --surface: #0a0a0a;
+  --surface-glass: rgba(10, 10, 10, 0.7);
+  --page-bg: #000000;
+  --text-default: #fafafa;
+  --muted: #a1a1aa;
+  --accent: #a78bfa;
+  /* Light Purple */
+  --accent-secondary: #60a5fa;
+  /* Light Blue */
+  --accent-glow: rgba(167, 139, 250, 0.35);
+  --accent-on: #0a0a0a;
+  --border: rgba(255, 255, 255, 0.08);
 }
 
-@keyframes drift {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+/* Utilities */
+.glass-panel {
+  background: var(--surface-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--border);
 }
 
-.dark body {
-  background: linear-gradient(
-    120deg,
-    #05080f,
-    #0a0f1f,
-    #060a14
-  );
-  background-size: 300% 300%;
-  animation: drift 60s ease infinite;
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
-.page {
-  background-color: transparent;
-  animation: fadeUp 0.6s ease forwards;
-  will-change: opacity, transform;
+.mesh-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background:
+    radial-gradient(at 0% 0%, rgba(124, 58, 237, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(59, 130, 246, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.12) 0px, transparent 50%),
+    radial-gradient(at 0% 100%, rgba(59, 130, 246, 0.12) 0px, transparent 50%);
+  filter: blur(50px);
+  opacity: 0.7;
 }
 
-.surface,
-nav {
-  background-color: var(--surface);
-  color: var(--text-default);
+.dark .mesh-bg {
+  opacity: 0.25;
 }
 
-.muted {
-  color: var(--muted);
+/* Animations */
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
 }
 
 .btn-primary {
-  background-color: var(--accent);
+  background: linear-gradient(135deg, var(--accent) 0%, #3b82f6 100%);
   color: var(--accent-on);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px var(--accent-glow);
 }
 
 .btn-primary:hover {
-  filter: brightness(0.95);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px var(--accent-glow);
+  filter: brightness(1.1);
 }
 
 .btn-outline {
-  background-color: transparent;
-  border-color: var(--accent);
+  background: transparent;
+  border: 1px solid var(--accent);
   color: var(--accent);
+  transition: all 0.3s ease;
 }
 
 .btn-outline:hover {
-  background-color: var(--accent);
-  color: var(--accent-on);
+  background: rgba(59, 130, 246, 0.1);
+  box-shadow: 0 0 12px var(--accent-glow);
 }
 
-button {
-  position: relative;
-  overflow: hidden;
+.page-transition {
+  animation: pageFade 0.4s ease-out forwards;
 }
 
-button::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 255, 255, 0.06);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.3s ease;
-}
-
-button:hover::after {
-  transform: scaleX(1);
-}
-
-.hero-title {
-  letter-spacing: 0.08em;
-  animation: settle 1.2s ease-out forwards;
-}
-
-@keyframes settle {
-  from {
-    letter-spacing: 0.18em;
-    opacity: 0.7;
-  }
-  to {
-    letter-spacing: 0.08em;
-    opacity: 1;
-  }
-}
-
-@keyframes fadeUp {
+@keyframes pageFade {
   from {
     opacity: 0;
-    transform: translateY(12px);
+    transform: translateY(10px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-.theme-explosion {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  pointer-events: none;
-  background: var(--explosion-bg);
-  animation: explode 0.6s ease-out forwards;
+/* Glitch Effect */
+@keyframes glitch-1 {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  20%,
+  24% {
+    opacity: 0.8;
+    transform: translateX(-2px) skewX(-1deg);
+  }
+
+  40%,
+  44% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  60%,
+  64% {
+    opacity: 0.8;
+    transform: translateX(2px) skewX(1deg);
+  }
+
+  80%,
+  84% {
+    opacity: 0;
+    transform: translateX(0);
+  }
 }
 
-@keyframes explode {
-  from {
-    clip-path: circle(0% at 50% 50%);
+@keyframes glitch-2 {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: translateX(0);
   }
-  to {
-    clip-path: circle(150% at 50% 50%);
+
+  25%,
+  29% {
+    opacity: 0.6;
+    transform: translateX(3px) skewX(2deg);
+  }
+
+  50%,
+  54% {
+    opacity: 0;
+    transform: translateX(0);
+  }
+
+  75%,
+  79% {
+    opacity: 0.6;
+    transform: translateX(-3px) skewX(-2deg);
   }
 }
 
-p {
-  line-height: 1.6;
+.animate-glitch-1 {
+  animation: glitch-1 3s infinite ease-in-out;
+}
+
+.animate-glitch-2 {
+  animation: glitch-2 3s infinite ease-in-out 0.1s;
+}
+
+.text-muted {
+  color: var(--muted);
 }

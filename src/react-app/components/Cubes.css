@@ -1,9 +1,10 @@
 :root {
   --col-gap: 5%;
   --row-gap: 5%;
-  --cube-perspective: 99999999px;
+  --cube-perspective: 600px;
   --cube-face-border: 1px solid #fff;
   --cube-face-bg: #060010;
+  --cube-face-shadow: none;
 }
 
 .default-animation {
@@ -49,7 +50,9 @@
   justify-content: center;
   background: var(--cube-face-bg);
   border: var(--cube-face-border);
+  box-shadow: var(--cube-face-shadow);
   opacity: 1;
+  backface-visibility: visible;
 }
 
 .default-animation .cube-face--top {

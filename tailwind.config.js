@@ -5,7 +5,17 @@ export default {
     "./src/react-app/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        sans: ['"Space Grotesk"', 'sans-serif'],
+      },
+      colors: {
+        background: "var(--page-bg)",
+        card: "var(--card-bg)",
+        accent: "var(--accent)",
+        "accent-dim": "var(--accent-dim)",
+      },
+    },
   },
   plugins: [],
 };

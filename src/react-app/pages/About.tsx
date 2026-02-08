@@ -1,12 +1,62 @@
+import PageLayout from "../components/PageLayout";
+import GlassCard from "../components/GlassCard";
+import { motion } from "motion/react";
+
 export default function About() {
   return (
-    <div className="page">
-    <div className="pt-32 pb-24 px-6 bg-white dark:bg-gray-950 transition-colors duration-300">
-      <div className="max-w-6xl mx-auto">
-        <h1 className="text-5xl font-bold text-[#4F7FFF] dark:text-[#6A8DFF] mb-4">About</h1>
-        <p className="text-lg text-gray-600 dark:text-gray-400 mb-16">Coming soon</p>
+    <PageLayout>
+      <div className="max-w-4xl mx-auto">
+        {/* Hero */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          className="mb-16 text-center"
+        >
+          <h1 className="text-5xl md:text-7xl font-bold mb-6"><span className="text-gradient">Our Story</span></h1>
+        </motion.div>
+
+        {/* History & Mission */}
+        <div className="space-y-12">
+          <GlassCard className="p-8 md:p-12">
+            <div className="text-sm font-bold text-blue-500 mb-4 uppercase tracking-widest">The Beginning</div>
+            <h2 className="text-3xl font-bold mb-6">Founded on December 14, 2021</h2>
+            <div className="text-lg text-muted space-y-6 leading-relaxed">
+              <p>
+                Shunya started with a simple idea: Mathematics is not just about numbers on a page;
+                it's a language that describes the universe.
+              </p>
+              <p>
+                What began as a small group of enthusiasts has grown into the official mathematics club of PES University,
+                spanning all three campuses. We are dedicated to breaking the myth that math is mundane or purely academic.
+              </p>
+            </div>
+          </GlassCard>
+
+          <GlassCard className="p-8 md:p-12 border-emerald-500/30">
+            <div className="text-sm font-bold text-emerald-500 mb-4 uppercase tracking-widest">Our Mission</div>
+            <h2 className="text-3xl font-bold mb-6">To Explore, Analyze, and Create.</h2>
+            <div className="text-lg text-muted space-y-6 leading-relaxed">
+              <p>
+                We aim to promote mathematical literacy and analytical thinking through practical application.
+                Whether it's game theory in poker, the geometry of black holes, or the algorithms behind AI,
+                we explore it all.
+              </p>
+            </div>
+          </GlassCard>
+
+          {/* Stats / Trivia */}
+          <div className="grid md:grid-cols-2 gap-6">
+            <GlassCard className="text-center py-8">
+              <div className="text-4xl font-bold text-blue-500 mb-2">3+</div>
+              <div className="text-muted">Campuses</div>
+            </GlassCard>
+            <GlassCard className="text-center py-8">
+              <div className="text-4xl font-bold text-purple-500 mb-2">500+</div>
+              <div className="text-muted">Community Members</div>
+            </GlassCard>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
+    </PageLayout>
   );
 }
