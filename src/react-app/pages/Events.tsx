@@ -44,10 +44,10 @@ export default function Events() {
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="mb-16 text-center"
+          className="mb-16"
         >
           <h1 className="text-5xl md:text-7xl font-bold mb-6"><span className="text-gradient">Events</span></h1>
-          <p className="text-xl text-muted max-w-2xl mx-auto">
+          <p className="text-xl text-muted max-w-2xl">
             Join us for workshops, hackathons, and talks that push the boundaries of your mathematical understanding.
           </p>
         </motion.div>
@@ -55,7 +55,6 @@ export default function Events() {
         {/* Upcoming */}
         <section className="mb-24">
           <div className="flex items-center gap-4 mb-8">
-            <div className="h-px bg-slate-200 dark:bg-slate-800 flex-grow"></div>
             <h2 className="text-2xl font-bold uppercase tracking-widest text-muted">Upcoming</h2>
             <div className="h-px bg-slate-200 dark:bg-slate-800 flex-grow"></div>
           </div>
@@ -70,7 +69,6 @@ export default function Events() {
         {/* Past */}
         <section>
           <div className="flex items-center gap-4 mb-8">
-            <div className="h-px bg-slate-200 dark:bg-slate-800 flex-grow"></div>
             <h2 className="text-2xl font-bold uppercase tracking-widest text-muted">Past Archives</h2>
             <div className="h-px bg-slate-200 dark:bg-slate-800 flex-grow"></div>
           </div>
