@@ -65,13 +65,18 @@ function FloatingAccents() {
 
     const accents = useMemo(() => {
         const items = [];
-        for (let i = 0; i < 8; i++) {
-            const angle = (i / 8) * Math.PI * 2;
-            const radius = 4 + Math.random() * 1.5;
+        for (let i = 0; i < 75; i++) {
+            const angle = Math.random() * Math.PI * 2;
+            const radius = 3 + Math.random() * 10; // Spread out more (3 to 11 units)
             items.push({
-                position: [Math.cos(angle) * radius, (Math.random() - 0.5) * 3, Math.sin(angle) * radius] as [number, number, number],
-                scale: 0.1 + Math.random() * 0.15,
-                speed: 0.5 + Math.random() * 0.5,
+                // Randomize position more
+                position: [
+                    Math.cos(angle) * radius,
+                    (Math.random() - 0.75) * 8, // Wider vertical spread
+                    Math.sin(angle) * radius
+                ] as [number, number, number],
+                scale: 0.05 + Math.random() * 0.3, // Smaller scale
+                speed: 0.2 + Math.random() * 0.6, // Varies speed
             });
         }
         return items;
