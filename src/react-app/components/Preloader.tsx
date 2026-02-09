@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 
 interface PreloaderProps {
@@ -6,7 +6,14 @@ interface PreloaderProps {
 }
 
 export default function Preloader({ onComplete }: PreloaderProps) {
+    const videoRef = useRef<HTMLVideoElement>(null);
     const [isVideoLoaded, setIsVideoLoaded] = useState(false);
+
+    useEffect(() => {
+        if (videoRef.current) {
+            videoRef.current.playbackRate = 2.5;
+        }
+    }, []);
 
     // Fallback timeout in case video fails or takes too long
     useEffect(() => {
@@ -23,12 +30,14 @@ export default function Preloader({ onComplete }: PreloaderProps) {
             transition={{ duration: 0.8, ease: "easeInOut" }}
         >
             <video
+                ref={videoRef}
                 autoPlay
                 muted
                 playsInline
                 className="max-w-[60vw] max-h-[60vh] object-contain opacity-100"
                 onEnded={onComplete}
                 onLoadedData={() => setIsVideoLoaded(true)}
+            // Increase video speed to 2x
             >
                 <source src="/assets/shunya_logo_animation.mp4" type="video/mp4" />
             </video>
