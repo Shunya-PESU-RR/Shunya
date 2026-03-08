@@ -93,6 +93,12 @@ export default function People() {
       role: "Tech Core",
       image: "/team_pics/Sathyajit_Tech-Core.jpg",
       id: "SH-2025-015"
+    },
+    {
+      name: "Lakshya Budhauliya",
+      role: "PR and Campaigning Core",
+      image: "/team_pics/Lakshya_Budhauliya_PRC_Core.jpeg",
+      id: "SH-2025-016"
     }
   ];
 
