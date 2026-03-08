@@ -7,47 +7,92 @@ export default function People() {
     {
       name: "Noel Jose",
       role: "Club Head",
-      image: "https://github.com/NJWasTaken.png",
-      id: "SH-2024-001"
+      image: "/team_pics/Noel_Club_Head.png",
+      id: "SH-2025-001"
+    },
+    {
+      name: "Lakshya",
+      role: "Deputy Club Head",
+      image: "/team_pics/Lakshya_Deputy_Head.jpg",
+      id: "SH-2025-002"
+    },
+    {
+      name: "Pranav",
+      role: "Deputy Club Head",
+      image: "/team_pics/Pranav_Deputy_Head.jpeg",
+      id: "SH-2025-003"
+    },
+    {
+      name: "Pragathi",
+      role: "Event Management Head",
+      image: "/team_pics/Pragathi_EVM.jpeg",
+      id: "SH-2025-004"
+    },
+    {
+      name: "Dibya",
+      role: "Logistics Head",
+      image: "/team_pics/Dibya_Logs.jpeg",
+      id: "SH-2025-005"
+    },
+    {
+      name: "Janhavi",
+      role: "Math Head",
+      image: "/team_pics/Janhavi_math.jpeg",
+      id: "SH-2025-006"
+    },
+    {
+      name: "Madhu",
+      role: "Math Head",
+      image: "/team_pics/Madhu_math.jpeg",
+      id: "SH-2025-007"
+    },
+    {
+      name: "Nandini",
+      role: "Operations Head",
+      image: "/team_pics/Nandini_OPS.jpg",
+      id: "SH-2025-008"
+    },
+    {
+      name: "Nihal",
+      role: "Event Management Core",
+      image: "/team_pics/Nihal_EVM.jpeg",
+      id: "SH-2025-009"
+    },
+    {
+      name: "Nirav",
+      role: "Marketing and Sponsorship Head",
+      image: "/team_pics/Nirav_MNS.jpg",
+      id: "SH-2025-010"
+    },
+    {
+      name: "Nishita",
+      role: "Design Head",
+      image: "/team_pics/Nishita_Design.jpg",
+      id: "SH-2025-011"
+    },
+    {
+      name: "Paranshu",
+      role: "PR & Campaigning Head",
+      image: "/team_pics/Paranshu_PRC.jpg",
+      id: "SH-2025-012"
+    },
+    {
+      name: "Pavan",
+      role: "Hospitality Head",
+      image: "/team_pics/Pavan_Hospi.webp",
+      id: "SH-2025-013"
     },
     {
       name: "C Kaustubh",
       role: "Technical Head",
-      image: "https://github.com/snigenigmatic.png",
-      id: "SH-2024-002"
+      image: "/team_pics/Kaustubh_Tech.jpeg",
+      id: "SH-2025-014"
     },
     {
-      name: "Roshan",
-      role: "Vice Head",
-      image: "https://ui-avatars.com/api/?name=Roshan&background=0D8ABC&color=fff&size=400",
-      id: "SH-2024-003"
-    }
-  ];
-
-  const members = [
-    {
-      name: "Member One",
-      role: "Core Team",
-      image: "https://ui-avatars.com/api/?name=Member+One&background=0070f3&color=fff&size=400",
-      id: "SH-2024-101"
-    },
-    {
-      name: "Member Two",
-      role: "Core Team",
-      image: "https://ui-avatars.com/api/?name=Member+Two&background=7928ca&color=fff&size=400",
-      id: "SH-2024-102"
-    },
-    {
-      name: "Member Three",
-      role: "Core Team",
-      image: "https://ui-avatars.com/api/?name=Member+Three&background=0070f3&color=fff&size=400",
-      id: "SH-2024-103"
-    },
-    {
-      name: "Member Four",
-      role: "Core Team",
-      image: "https://ui-avatars.com/api/?name=Member+Four&background=7928ca&color=fff&size=400",
-      id: "SH-2024-104"
+      name: "Sathyajit",
+      role: "Tech Core",
+      image: "/team_pics/Sathyajit_Tech-Core.jpg",
+      id: "SH-2025-015"
     }
   ];
 
@@ -65,10 +110,10 @@ export default function People() {
           </p>
         </motion.div>
 
-        {/* Core Team */}
-        <section className="mb-24">
+        {/* Core Committee */}
+        <section>
           <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-2xl font-bold uppercase tracking-widest text-muted">Core Committee</h2>
+            <h2 className="text-2xl font-bold uppercase tracking-widest text-muted">Core Team</h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center">
@@ -77,58 +122,13 @@ export default function People() {
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: index * 0.1 }}
+                transition={{ delay: index * 0.05 }}
               >
                 <ReflectiveCard
                   name={member.name}
                   role={member.role}
                   image={member.image}
                   id={member.id}
-                  overlayColor="rgba(0, 0, 0, 0.2)"
-                  blurStrength={12}
-                  glassDistortion={30}
-                  metalness={1}
-                  roughness={0.75}
-                  displacementStrength={20}
-                  noiseScale={1}
-                  specularConstant={5}
-                  grayscale={0.15}
-                  color="#ffffff"
-                />
-              </motion.div>
-            ))}
-          </div>
-        </section>
-
-        {/* Members */}
-        <section>
-          <div className="flex items-center gap-4 mb-12">
-            <h2 className="text-xl font-bold uppercase tracking-widest text-muted opacity-70">Members</h2>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-            {members.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.3 + index * 0.1 }}
-              >
-                <ReflectiveCard
-                  name={member.name}
-                  role={member.role}
-                  image={member.image}
-                  id={member.id}
-                  overlayColor="rgba(0, 0, 0, 0.2)"
-                  blurStrength={12}
-                  glassDistortion={30}
-                  metalness={1}
-                  roughness={0.75}
-                  displacementStrength={20}
-                  noiseScale={1}
-                  specularConstant={5}
-                  grayscale={0.15}
-                  color="#ffffff"
                 />
               </motion.div>
             ))}
