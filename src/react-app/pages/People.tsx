@@ -47,9 +47,9 @@ export default function People() {
       id: "SH-2025-007"
     },
     {
-      name: "Nandini",
+      name: "Nandani",
       role: "Operations Head",
-      image: "/team_pics/Nandini_OPS.jpg",
+      image: "/team_pics/Nandani_OPS.jpg",
       id: "SH-2025-008"
     },
     {
