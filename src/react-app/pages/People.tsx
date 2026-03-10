@@ -29,76 +29,70 @@ export default function People() {
       id: "SH-2025-004"
     },
     {
+      name: "C Kaustubh",
+      role: "Technical Head",
+      image: "/team_pics/Kaustubh_Tech.jpeg",
+      id: "SH-2025-005"
+    },
+    {
       name: "Dibya",
       role: "Logistics Head",
       image: "/team_pics/Dibya_Logs.jpeg",
-      id: "SH-2025-005"
+      id: "SH-2025-006"
     },
     {
       name: "Janhavi",
       role: "Math Head",
       image: "/team_pics/Janhavi_math.jpeg",
-      id: "SH-2025-006"
+      id: "SH-2025-007"
     },
     {
       name: "Madhu",
       role: "Math Head",
       image: "/team_pics/Madhu_math.jpeg",
-      id: "SH-2025-007"
+      id: "SH-2025-008"
     },
     {
       name: "Nandani",
       role: "Operations Head",
       image: "/team_pics/Nandani_OPS.jpg",
-      id: "SH-2025-008"
+      id: "SH-2025-009"
     },
     {
       name: "Nihal",
       role: "Event Management Core",
       image: "/team_pics/Nihal_EVM.jpeg",
-      id: "SH-2025-009"
+      id: "SH-2025-010"
     },
     {
       name: "Nirav",
       role: "Marketing and Sponsorship Head",
       image: "/team_pics/Nirav_MNS.jpg",
-      id: "SH-2025-010"
+      id: "SH-2025-011"
     },
     {
       name: "Nishita",
       role: "Design Head",
       image: "/team_pics/Nishita_Design.jpg",
-      id: "SH-2025-011"
+      id: "SH-2025-012"
     },
     {
       name: "Paranshu",
       role: "PR & Campaigning Head",
       image: "/team_pics/Paranshu_PRC.jpg",
-      id: "SH-2025-012"
+      id: "SH-2025-013"
     },
     {
       name: "Pavan",
       role: "Hospitality Head",
       image: "/team_pics/Pavan_Hospi.webp",
-      id: "SH-2025-013"
-    },
-    {
-      name: "C Kaustubh",
-      role: "Technical Head",
-      image: "/team_pics/Kaustubh_Tech.jpeg",
       id: "SH-2025-014"
-    },
-    {
-      name: "Sathyajit",
-      role: "Tech Core",
-      image: "/team_pics/Sathyajit_Tech-Core.jpg",
-      id: "SH-2025-015"
     },
     {
       name: "Lakshya Budhauliya",
       role: "PR and Campaigning Core",
       image: "/team_pics/Lakshya_Budhauliya_PRC_Core.jpeg",
-      id: "SH-2025-016"
+      id: "SH-2025-015"
     }
   ];
 
