@@ -83,17 +83,24 @@ export default function People() {
       id: "SH-2025-013"
     },
     {
-      name: "Pavan",
-      role: "Hospitality Head",
-      image: "/team_pics/Pavan_Hospi.webp",
+      name: "Lakshya Budhauliya",
+      role: "PR & Campaigning Head",
+      image: "/team_pics/Lakshya_Budhauliya_PRC.jpeg",
       id: "SH-2025-014"
     },
     {
-      name: "Lakshya Budhauliya",
-      role: "PR and Campaigning Core",
-      image: "/team_pics/Lakshya_Budhauliya_PRC_Core.jpeg",
+      name: "Pavan",
+      role: "Hospitality Head",
+      image: "/team_pics/Pavan_Hospi.webp",
       id: "SH-2025-015"
-    }
+    },
+    {
+      name: "Alisha",
+      role: "Hospitality Head",
+      image: "/team_pics/Alisha-hospi.jpeg",
+      id: "SH-2025-016"
+    },
+    
   ];
 
   return (

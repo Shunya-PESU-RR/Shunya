@@ -87,7 +87,7 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <GlassCard className="group cursor-pointer">
               <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
-              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • March 29-30, 2026</div>
+              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • April 6-11, 2026</div>
               <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2026</h3>
               <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.</p>
             </GlassCard>

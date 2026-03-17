@@ -6,7 +6,7 @@ export default function Events() {
   const upcomingEvents = [
     {
       title: "Arithemania 2026",
-      date: "March 29-30, 2026",
+      date: "April 6-11, 2026",
       description: "Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.",
       type: "hackathon" as const,
       image: "/events/arithemania_2026.png",
