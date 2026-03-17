@@ -23,40 +23,46 @@ export default function People() {
       id: "SH-2025-003"
     },
     {
+      name: "Khushi",
+      role: "Club Mentor",
+      image: "/team_pics/Khushi-mentor.JPG",
+      id: "SH-2025-004"
+    },
+    {
       name: "Pragathi",
       role: "Event Management Head",
       image: "/team_pics/Pragathi_EVM.jpeg",
-      id: "SH-2025-004"
+      id: "SH-2025-005"
     },
     {
       name: "C Kaustubh",
       role: "Technical Head",
       image: "/team_pics/Kaustubh_Tech.jpeg",
-      id: "SH-2025-005"
+      id: "SH-2025-006"
     },
     {
       name: "Dibya",
       role: "Logistics Head",
       image: "/team_pics/Dibya_Logs.jpeg",
-      id: "SH-2025-006"
+      id: "SH-2025-007"
     },
     {
       name: "Janhavi",
       role: "Math Head",
       image: "/team_pics/Janhavi_math.jpeg",
-      id: "SH-2025-007"
+      id: "SH-2025-008"
     },
     {
       name: "Madhu",
       role: "Math Head",
       image: "/team_pics/Madhu_math.jpeg",
-      id: "SH-2025-008"
+      id: "SH-2025-009"
     },
     {
       name: "Nandani",
       role: "Operations Head",
       image: "/team_pics/Nandani_OPS.jpg",
-      id: "SH-2025-009"
+      id: "SH-2025-010"
     },
     {
       name: "Nirav",
