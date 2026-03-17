@@ -31,10 +31,6 @@ const ReflectiveCard: React.FC<ReflectiveCardProps> = ({
 
       <div className="reflective-content">
         <div className="card-header">
-          <div className="security-badge">
-            <Lock size={14} className="security-icon" />
-            <span>SHUNYA MEMBER</span>
-          </div>
           <Activity className="status-icon" size={20} />
         </div>
 
