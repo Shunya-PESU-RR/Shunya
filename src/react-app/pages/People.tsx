@@ -59,12 +59,6 @@ export default function People() {
       id: "SH-2025-009"
     },
     {
-      name: "Nihal",
-      role: "Event Management Core",
-      image: "/team_pics/Nihal_EVM.jpeg",
-      id: "SH-2025-010"
-    },
-    {
       name: "Nirav",
       role: "Marketing and Sponsorship Head",
       image: "/team_pics/Nirav_MNS.jpg",
