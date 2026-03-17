@@ -89,8 +89,8 @@ export default function Home() {
               <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
               <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • March 29-30, 2026</div>
               <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2026</h3>
-              <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 24 hours of intense problem solving, algorithm design, and mathematical modeling.</p>
-            </GlassCard>
+              <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.</p>
+            </GlassCard>``
 
             <GlassCard className="group cursor-pointer">
               <img src="/events/kalari-4.0.jpg" alt="Kalari 4.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />

@@ -7,7 +7,7 @@ export default function Events() {
     {
       title: "Arithemania 2026",
       date: "March 29-30, 2026",
-      description: "Our flagship mathematics hackathon. 24 hours of intense problem solving, algorithm design, and mathematical modeling.",
+      description: "Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.",
       type: "hackathon" as const,
       image: "/events/arithemania_2026.png",
       // link: "#"
