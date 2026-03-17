@@ -9,6 +9,7 @@ import HomePage from "./pages/Home";
 import EventsPage from "./pages/Events";
 import PeoplePage from "./pages/People";
 import AboutPage from "./pages/About";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function App() {
   const [isLoading, setIsLoading] = useState(true);
@@ -20,6 +21,7 @@ export default function App() {
           <Preloader key="preloader" onComplete={() => setIsLoading(false)} />
         ) : (
           <Router>
+            <ScrollToTop />
             <div className="flex flex-col min-h-screen">
               <Navigation />
               <Routes>

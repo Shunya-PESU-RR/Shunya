@@ -9,32 +9,40 @@ export default function Events() {
       date: "March 29-30, 2026",
       description: "Our flagship mathematics hackathon. 24 hours of intense problem solving, algorithm design, and mathematical modeling.",
       type: "hackathon" as const,
-      imageGradient: "from-blue-600 to-purple-600",
-      link: "#"
+      image: "/events/arithemania_2026.png",
+      // link: "#"
     }
   ];
 
   const pastEvents = [
     {
-      title: "Graph Theory 101",
-      date: "February 10, 2025",
-      description: "An interactive workshop covering the basics of graph theory, from Eulerian paths to network flow optimization.",
-      type: "workshop" as const,
-      imageGradient: "from-emerald-500 to-teal-600"
+      title: "Kalari 4.0",
+      date: "February 11, 2026",
+      description: "A challenge to foster heuristic thinking and problem-solving skills among students",
+      type: "math event" as const,
+      image: "/events/kalari-4.0.jpg"
     },
     {
-      title: "The Infinite Void",
-      date: "January 15, 2025",
-      description: "A talk by Dr. S. Ramanujan on the philosophical and mathematical implications of zero and infinity.",
-      type: "talk" as const,
-      imageGradient: "from-amber-500 to-orange-600"
-    },
-    {
-      title: "Integration Bee 2024",
-      date: "November 12, 2024",
-      description: "A rapid-fire tournament to find the fastest integrator on campus. Patterned after the MIT Integration Bee.",
+      title: "Code of Honour 2.0 - Shunya x Team Samarpana",
+      date: "October 11-12, 2025",
+      description: "The coding and mathematics hackathon where logic meets defense",
       type: "hackathon" as const,
-      imageGradient: "from-red-500 to-pink-600"
+      image: "/events/coh2.0.jpg"
+    },
+    {
+      title: "π-naccle2.0",
+      date: "September 10, 2025",
+      description: "The Ultimate Crown of Logic, challenging participants with relays, ciphers, and a strategic auction to test their mathematical prowess and quick thinking.",
+      type: "math event" as const,  
+      image: "/events/pinnacle.jpg"
+    },
+    {
+      title: "Arithemania 4.0",
+      date: "March 29-30, 2025",
+      description: "Our flagship mathematics hackathon. 24 hours of intense problem solving, algorithm design, and mathematical modeling.",
+      type: "hackathon" as const,
+      image: "/events/arithemania4.0.jpg",
+      // link: "#"
     }
   ];
 

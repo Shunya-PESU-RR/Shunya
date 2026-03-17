@@ -51,8 +51,18 @@ export default function About() {
                   </p>
                 </div>
               </div>
-              <div className="mt-6 pt-6 border-t border-white/10">
-                <div className="text-6xl md:text-7xl lg:text-8xl font-bold text-[#0070f3]/10">∅</div>
+              <div className="mt-8 pt-8 border-t border-white/10">
+                <div className="text-xs md:text-sm font-bold text-[#7928ca] mb-3 md:mb-4 uppercase tracking-widest">
+                  Our Mission
+                </div>
+                <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-3 md:mb-4">
+                  To Explore, Analyze, and Create
+                </h2>
+                <p className="text-sm md:text-base lg:text-lg text-muted leading-relaxed">
+                  We aim to promote mathematical literacy and analytical thinking through practical application.
+                  Whether it's game theory in poker, the geometry of black holes, or the algorithms behind AI,
+                  we explore it all.
+                </p>
               </div>
             </GlassCard>
           </motion.div>
@@ -64,18 +74,20 @@ export default function About() {
             transition={{ delay: 0.2 }}
             className="lg:col-span-7"
           >
-            <GlassCard className="p-6 md:p-8 h-full min-h-[200px] lg:min-h-[290px] border-[#7928ca]/20">
-              <div className="text-xs md:text-sm font-bold text-[#7928ca] mb-3 md:mb-4 uppercase tracking-widest">
-                Our Mission
+            <GlassCard className="p-0 h-full min-h-[200px] lg:min-h-[290px] border-[#7928ca]/20 overflow-hidden relative group">
+              <img 
+                src="/events/team_pic.jpg" 
+                alt="Shunya Team" 
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex items-end p-6 md:p-8 pointer-events-none">
+                <div className="text-white">
+                  <div className="text-xs md:text-sm font-bold text-[#7928ca] mb-1 md:mb-2 uppercase tracking-widest drop-shadow-md">
+                    The Team
+                  </div>
+                  <h3 className="text-xl md:text-2xl font-bold drop-shadow-lg">Minds Behind Shunya</h3>
+                </div>
               </div>
-              <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4">
-                To Explore, Analyze, and Create
-              </h2>
-              <p className="text-sm md:text-base lg:text-lg text-muted leading-relaxed">
-                We aim to promote mathematical literacy and analytical thinking through practical application.
-                Whether it's game theory in poker, the geometry of black holes, or the algorithms behind AI,
-                we explore it all.
-              </p>
             </GlassCard>
           </motion.div>
 
