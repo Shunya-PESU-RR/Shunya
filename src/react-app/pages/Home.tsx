@@ -86,24 +86,24 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <GlassCard className="group cursor-pointer">
-              <div className="h-40 md:h-48 rounded-xl bg-gradient-to-br from-[#0070f3]/20 to-[#7928ca]/20 mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
-              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • March 29, 2025</div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2025</h3>
-              <p className="text-muted text-xs md:text-sm">Our flagship math hackathon is back. Bigger, better, and more challenging.</p>
+              <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
+              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • March 29-30, 2026</div>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2026</h3>
+              <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 24 hours of intense problem solving, algorithm design, and mathematical modeling.</p>
             </GlassCard>
 
             <GlassCard className="group cursor-pointer">
-              <div className="h-40 md:h-48 rounded-xl bg-gradient-to-br from-[#7928ca]/20 to-[#0070f3]/20 mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
-              <div className="text-xs md:text-sm text-[#7928ca] font-medium mb-2">Workshop • Feb 10, 2025</div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">Graph Theory 101</h3>
-              <p className="text-muted text-xs md:text-sm">Understanding the foundations of network analysis and its applications.</p>
+              <img src="/events/kalari-4.0.jpg" alt="Kalari 4.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
+              <div className="text-xs md:text-sm text-[#7928ca] font-medium mb-2">Math Event • February 11, 2026</div>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Kalari 4.0</h3>
+              <p className="text-muted text-xs md:text-sm">A challenge to foster heuristic thinking and problem-solving skills among students.</p>
             </GlassCard>
 
             <GlassCard className="group cursor-pointer sm:col-span-2 lg:col-span-1">
-              <div className="h-40 md:h-48 rounded-xl bg-gradient-to-br from-[#0070f3]/20 to-[#7928ca]/20 mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
-              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Talk • Jan 15, 2025</div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">The Infinite Void</h3>
-              <p className="text-muted text-xs md:text-sm">A deep dive into the concept of zero and infinity in modern mathematics.</p>
+              <img src="/events/coh2.0.jpg" alt="Code of Honour 2.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
+              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Hackathon • October 11-12, 2025</div>
+              <h3 className="text-lg md:text-xl font-bold mb-2">Code of Honour 2.0</h3>
+              <p className="text-muted text-xs md:text-sm">The coding and mathematics hackathon where logic meets defense.</p>
             </GlassCard>
           </div>
         </div>

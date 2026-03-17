@@ -5,22 +5,24 @@ interface EventCardProps {
     title: string;
     date: string;
     description: string;
-    type: 'hackathon' | 'workshop' | 'talk';
-    imageGradient: string;
+    type: 'hackathon' | 'workshop' | 'talk' | 'math event';
+    image: string;
     link?: string;
     isPast?: boolean;
 }
 
-export default function EventCard({ title, date, description, type, imageGradient, link, isPast = false }: EventCardProps) {
+export default function EventCard({ title, date, description, type, image, link, isPast = false }: EventCardProps) {
     const typeColors = {
         hackathon: 'text-blue-500',
         workshop: 'text-emerald-500',
-        talk: 'text-amber-500'
+        talk: 'text-amber-500',
+        'math event': 'text-purple-500'
     };
 
     return (
         <GlassCard className={`group cursor-pointer h-full flex flex-col ${isPast ? 'opacity-80 hover:opacity-100' : ''}`}>
-            <div className={`h-48 rounded-xl bg-gradient-to-br ${imageGradient} mb-6 group-hover:scale-[1.02] transition-transform duration-500 relative overflow-hidden`}>
+            <div className="h-48 rounded-xl mb-6 group-hover:scale-[1.02] transition-transform duration-500 relative overflow-hidden">
+                <img src={image} alt={title} className="w-full h-full object-cover rounded-xl" />
                 {/* Overlay for type */}
                 <div className="absolute top-4 left-4 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-xs font-bold text-white uppercase tracking-wider">
                     {type}
