@@ -8,8 +8,10 @@ function VoidCore() {
     const meshRef = useRef<THREE.Mesh>(null);
     const wireframeRef = useRef<THREE.LineSegments>(null);
     const { mouse } = useThree();
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     useFrame((state, delta) => {
+        if (prefersReduced) return;
         if (meshRef.current && wireframeRef.current) {
             // Slow auto-rotation
             meshRef.current.rotation.x += delta * 0.1;
@@ -56,8 +58,10 @@ function VoidCore() {
 // Floating small geometric accents
 function FloatingAccents() {
     const groupRef = useRef<THREE.Group>(null);
+    const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     useFrame((state) => {
+        if (prefersReduced) return;
         if (groupRef.current) {
             groupRef.current.rotation.y = state.clock.elapsedTime * 0.05;
         }

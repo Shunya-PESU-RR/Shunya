@@ -1,8 +1,15 @@
 import PageLayout from "../components/PageLayout";
 import GlassCard from "../components/GlassCard";
 import { motion } from "motion/react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function About() {
+  usePageMeta({
+    title: "About — SHUNYA | PES University Mathematics Club",
+    description: "Founded December 2021, SHUNYA is the official research-oriented mathematics club at PES University. We explore mathematics through hackathons, research, and events across 3 campuses.",
+    path: "/about"
+  });
+
   return (
     <PageLayout>
       <div className="max-w-7xl mx-auto">

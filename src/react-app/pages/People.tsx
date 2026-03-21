@@ -1,8 +1,15 @@
 import PageLayout from "../components/PageLayout";
 import ReflectiveCard from "../components/ReflectiveCard";
 import { motion } from "motion/react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function People() {
+  usePageMeta({
+    title: "Team — SHUNYA | PES University Mathematics Club",
+    description: "Meet the core team behind SHUNYA, the official mathematics club of PES University RR Campus, Bengaluru.",
+    path: "/people"
+  });
+
   const coreTeam = [
     {
       name: "Noel Jose",

@@ -11,7 +11,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
 
     useEffect(() => {
         if (videoRef.current) {
-            videoRef.current.playbackRate = 2.5;
+            videoRef.current.playbackRate = 3.5;
         }
     }, []);
 
@@ -19,7 +19,7 @@ export default function Preloader({ onComplete }: PreloaderProps) {
     useEffect(() => {
         const timer = setTimeout(() => {
             onComplete();
-        }, 4500); // Adjust based on video length
+        }, 2000);
         return () => clearTimeout(timer);
     }, [onComplete]);
 

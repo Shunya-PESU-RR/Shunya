@@ -26,6 +26,9 @@ const ReflectiveCard: React.FC<ReflectiveCardProps> = ({
           src={image}
           alt={name}
           className="reflective-photo"
+          loading="lazy"
+          width={320}
+          height={500}
         />
       )}
 

@@ -1,17 +1,29 @@
+import { lazy, Suspense } from "react";
 import { Link } from "react-router-dom";
 import { motion } from "motion/react";
+import { Sigma, Infinity, Triangle } from "lucide-react";
 import DecryptedText from "../components/DecryptedText";
-import VoidScene from "../visuals/VoidScene";
 import PageLayout from "../components/PageLayout";
 import GlassCard from "../components/GlassCard";
 import Logo from "../components/Logo";
+import { usePageMeta } from "../hooks/usePageMeta";
+
+const VoidScene = lazy(() => import("../visuals/VoidScene"));
 
 export default function Home() {
+  usePageMeta({
+    title: "SHUNYA | Official Mathematics Club of PES University Bengaluru",
+    description: "SHUNYA is the official mathematics club of PES University, Bengaluru. Arithemania 2026 — our flagship national mathematics hackathon — is coming April 2026.",
+    path: "/"
+  });
+
   return (
     <PageLayout>
       {/* Hero Section */}
       <section className="relative min-h-[90vh] flex flex-col justify-center items-center text-center px-4">
-        <VoidScene />
+        <Suspense fallback={<div className="absolute inset-0 z-0" />}>
+          <VoidScene />
+        </Suspense>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full">
           <motion.div
@@ -58,17 +70,23 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-8">
             <GlassCard className="text-center py-8 md:py-12">
-              <div className="text-3xl md:text-4xl mb-3 md:mb-4">∑</div>
+              <div className="flex justify-center mb-3 md:mb-4 text-[var(--accent)]">
+                <Sigma size={36} strokeWidth={1.5} aria-hidden="true" />
+              </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Mathematics</h3>
               <p className="text-muted text-sm md:text-base">Beyond formulas. We explore the beauty and patterns that govern our universe.</p>
             </GlassCard>
             <GlassCard className="text-center py-8 md:py-12">
-              <div className="text-3xl md:text-4xl mb-3 md:mb-4">∞</div>
+              <div className="flex justify-center mb-3 md:mb-4 text-[var(--accent-secondary)]">
+                <Infinity size={36} strokeWidth={1.5} aria-hidden="true" />
+              </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Logic</h3>
               <p className="text-muted text-sm md:text-base">Critical thinking and structured reasoning to solve complex problems.</p>
             </GlassCard>
             <GlassCard className="text-center py-8 md:py-12 sm:col-span-2 md:col-span-1">
-              <div className="text-3xl md:text-4xl mb-3 md:mb-4">∆</div>
+              <div className="flex justify-center mb-3 md:mb-4 text-[var(--accent)]">
+                <Triangle size={36} strokeWidth={1.5} aria-hidden="true" />
+              </div>
               <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">Exploration</h3>
               <p className="text-muted text-sm md:text-base">A platform to research, discuss, and discover new mathematical frontiers.</p>
             </GlassCard>
@@ -86,21 +104,21 @@ export default function Home() {
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
             <GlassCard className="group cursor-pointer">
-              <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
+              <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={400} height={192} />
               <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • April 6-11, 2026</div>
               <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2026</h3>
               <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.</p>
             </GlassCard>
 
             <GlassCard className="group cursor-pointer">
-              <img src="/events/kalari-4.0.jpg" alt="Kalari 4.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
+              <img src="/events/kalari-4.0.jpg" alt="Kalari 4.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={400} height={192} />
               <div className="text-xs md:text-sm text-[#7928ca] font-medium mb-2">Math Event • February 11, 2026</div>
               <h3 className="text-lg md:text-xl font-bold mb-2">Kalari 4.0</h3>
               <p className="text-muted text-xs md:text-sm">A challenge to foster heuristic thinking and problem-solving skills among students.</p>
             </GlassCard>
 
             <GlassCard className="group cursor-pointer sm:col-span-2 lg:col-span-1">
-              <img src="/events/coh2.0.jpg" alt="Code of Honour 2.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" />
+              <img src="/events/coh2.0.jpg" alt="Code of Honour 2.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={400} height={192} />
               <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Hackathon • October 11-12, 2025</div>
               <h3 className="text-lg md:text-xl font-bold mb-2">Code of Honour 2.0</h3>
               <p className="text-muted text-xs md:text-sm">The coding and mathematics hackathon where logic meets defense.</p>
