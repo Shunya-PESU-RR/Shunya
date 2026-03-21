@@ -17,23 +17,23 @@ export default function App() {
   return (
     <ThemeProvider>
       <MotionConfig reducedMotion="user">
-        <AnimatePresence mode="wait">
-          {isLoading ? (
+        <Router>
+          <ScrollToTop />
+          <div className="flex flex-col min-h-screen">
+            <Navigation />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/events" element={<EventsPage />} />
+              <Route path="/people" element={<PeoplePage />} />
+              <Route path="/about" element={<AboutPage />} />
+            </Routes>
+            <Footer />
+          </div>
+        </Router>
+
+        <AnimatePresence>
+          {isLoading && (
             <Preloader key="preloader" onComplete={() => setIsLoading(false)} />
-          ) : (
-            <Router>
-              <ScrollToTop />
-              <div className="flex flex-col min-h-screen">
-                <Navigation />
-                <Routes>
-                  <Route path="/" element={<HomePage />} />
-                  <Route path="/events" element={<EventsPage />} />
-                  <Route path="/people" element={<PeoplePage />} />
-                  <Route path="/about" element={<AboutPage />} />
-                </Routes>
-                <Footer />
-              </div>
-            </Router>
           )}
         </AnimatePresence>
       </MotionConfig>
