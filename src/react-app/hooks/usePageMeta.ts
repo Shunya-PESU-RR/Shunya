@@ -12,7 +12,7 @@ export function usePageMeta({ title, description, path }: PageMeta) {
 
     const setMeta = (name: string, content: string) => {
       let el = document.querySelector(`meta[name="${name}"]`) as HTMLMetaElement
-           || document.querySelector(`meta[property="${name}"]`) as HTMLMetaElement;
+        || document.querySelector(`meta[property="${name}"]`) as HTMLMetaElement;
       if (!el) {
         el = document.createElement("meta");
         document.head.appendChild(el);
@@ -28,12 +28,12 @@ export function usePageMeta({ title, description, path }: PageMeta) {
       canonical.setAttribute("rel", "canonical");
       document.head.appendChild(canonical);
     }
-    canonical.setAttribute("href", `https://shunya.pes.edu${path}`);
+    canonical.setAttribute("href", `https://shunya-pes.vercel.app/${path}`);
 
     setMeta("description", description);
     setMeta("og:title", title);
     setMeta("og:description", description);
-    setMeta("og:url", `https://shunya.pes.edu${path}`);
+    setMeta("og:url", `https://shunya-pes.vercel.app/${path}`);
     setMeta("twitter:title", title);
     setMeta("twitter:description", description);
   }, [title, description, path]);
