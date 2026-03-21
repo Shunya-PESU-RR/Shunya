@@ -22,7 +22,7 @@ export default function EventCard({ title, date, description, type, image, link,
     return (
         <GlassCard className={`group cursor-pointer h-full flex flex-col ${isPast ? 'opacity-80 hover:opacity-100' : ''}`}>
             <div className="h-48 rounded-xl mb-6 group-hover:scale-[1.02] transition-transform duration-500 relative overflow-hidden">
-                <img src={image} alt={title} className="w-full h-full object-cover rounded-xl" />
+                <img src={image} alt={title} className="w-full h-full object-cover rounded-xl" loading="lazy" width={400} height={192} />
                 {/* Overlay for type */}
                 <div className="absolute top-4 left-4 px-3 py-1 bg-black/50 backdrop-blur-md rounded-full text-xs font-bold text-white uppercase tracking-wider">
                     {type}

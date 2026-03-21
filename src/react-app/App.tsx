@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { ThemeProvider } from "./hooks/useTheme";
-import { AnimatePresence } from "motion/react";
+import { AnimatePresence, MotionConfig } from "motion/react";
 import Navigation from "./components/Navigation";
 import Footer from "./components/Footer";
 import Preloader from "./components/Preloader";
@@ -16,25 +16,27 @@ export default function App() {
 
   return (
     <ThemeProvider>
-      <AnimatePresence mode="wait">
-        {isLoading ? (
-          <Preloader key="preloader" onComplete={() => setIsLoading(false)} />
-        ) : (
-          <Router>
-            <ScrollToTop />
-            <div className="flex flex-col min-h-screen">
-              <Navigation />
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/events" element={<EventsPage />} />
-                <Route path="/people" element={<PeoplePage />} />
-                <Route path="/about" element={<AboutPage />} />
-              </Routes>
-              <Footer />
-            </div>
-          </Router>
-        )}
-      </AnimatePresence>
+      <MotionConfig reducedMotion="user">
+        <AnimatePresence mode="wait">
+          {isLoading ? (
+            <Preloader key="preloader" onComplete={() => setIsLoading(false)} />
+          ) : (
+            <Router>
+              <ScrollToTop />
+              <div className="flex flex-col min-h-screen">
+                <Navigation />
+                <Routes>
+                  <Route path="/" element={<HomePage />} />
+                  <Route path="/events" element={<EventsPage />} />
+                  <Route path="/people" element={<PeoplePage />} />
+                  <Route path="/about" element={<AboutPage />} />
+                </Routes>
+                <Footer />
+              </div>
+            </Router>
+          )}
+        </AnimatePresence>
+      </MotionConfig>
     </ThemeProvider>
   );
 }

@@ -1,8 +1,15 @@
 import PageLayout from "../components/PageLayout";
 import EventCard from "../components/EventCard";
 import { motion } from "motion/react";
+import { usePageMeta } from "../hooks/usePageMeta";
 
 export default function Events() {
+  usePageMeta({
+    title: "Events — SHUNYA | PES University Mathematics Club",
+    description: "Arithemania 2026, Kalari, Code of Honour and more. Hackathons, workshops and math competitions from SHUNYA, the official maths club of PES University Bengaluru.",
+    path: "/events"
+  });
+
   const upcomingEvents = [
     {
       title: "Arithemania 2026",
