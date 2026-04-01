@@ -2,8 +2,8 @@ import { Link } from "react-router-dom";
 import { motion } from "motion/react";
 import PageLayout from "../components/PageLayout";
 import GlassCard from "../components/GlassCard";
-import EventSection from "../components/events/arithmenia/EventSection";
-import TimelineItem, { TimelineItemData } from "../components/events/arithmenia/TimelineItem";
+import EventSection from "../components/events/arithemania/EventSection";
+import TimelineItem, { TimelineItemData } from "../components/events/arithemania/TimelineItem";
 import { usePageMeta } from "../hooks/usePageMeta";
 
 const timeline: TimelineItemData[] = [
@@ -55,11 +55,11 @@ const rules = [
   "Finalists present live and answer jury questions."
 ];
 
-export default function Arithmenia() {
+export default function Arithemania() {
   usePageMeta({
     title: "Arithemania 5.0 — SHUNYA | PES University Mathematics Club",
     description: "Arithemania 5.0 is SHUNYA's national-level mathematics hackathon. Build in teams, pitch bold ideas, and compete for the final showcase.",
-    path: "/events/arithmenia"
+    path: "/events/arithemania"
   });
 
   return (
@@ -157,7 +157,11 @@ export default function Arithmenia() {
               ))}
             </div>
           </div>
-          <p className="text-sm text-muted mt-6">Dates are subject to change.</p>
+          <div className="mt-12 p-6 md:p-8 rounded-2xl bg-red-500/10 border border-red-500/20 text-center shadow-[0_0_30px_rgba(239,68,68,0.15)]">
+            <p className="text-2xl md:text-3xl font-black text-red-500 uppercase tracking-widest drop-shadow-md">
+              Disclaimer: Dates are subject to change.
+            </p>
+          </div>
         </EventSection>
 
         <EventSection

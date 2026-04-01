@@ -17,7 +17,7 @@ export default function Events() {
       description: "Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.",
       type: "hackathon" as const,
       image: "/events/arithemania_2026.png",
-      link: "/events/arithmenia"
+      link: "/events/arithemania"
     }
   ];
 
