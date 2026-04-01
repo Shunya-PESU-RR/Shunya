@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import GlassCard from './GlassCard';
 
 interface EventCardProps {
@@ -19,7 +20,7 @@ export default function EventCard({ title, date, description, type, image, link,
         'math event': 'text-purple-500'
     };
 
-    return (
+    const card = (
         <GlassCard className={`group cursor-pointer h-full flex flex-col ${isPast ? 'opacity-80 hover:opacity-100' : ''}`}>
             <div className="h-48 rounded-xl mb-6 group-hover:scale-[1.02] transition-transform duration-500 relative overflow-hidden">
                 <img src={image} alt={title} className="w-full h-full object-cover rounded-xl" loading="lazy" width={400} height={192} />
@@ -41,5 +42,13 @@ export default function EventCard({ title, date, description, type, image, link,
                 </div>
             )}
         </GlassCard>
+    );
+
+    if (!link) return card;
+
+    return (
+        <Link to={link} aria-label={`View ${title} details`} className="block">
+            {card}
+        </Link>
     );
 }
