@@ -8,7 +8,7 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const timeline: TimelineItemData[] = [
   {
-    period: "Apr 1-5",
+    period: "Apr 1-7",
     title: "Registrations",
     description: "Teams of 2-4 register and submit their initial pitch."
   },
@@ -206,12 +206,14 @@ export default function Arithemania() {
                 We will share the official registration link here as soon as entries open.
               </p>
             </div>
-            <button
-              type="button"
+            <a
+              href="https://unstop.com/o/DYUqtQT?lb=iMI5xbZr&utm_medium=Share&utm_source=shunymat51684&utm_campaign=Online_coding_challenge"
+              target="_blank"
+              rel="noopener noreferrer"
               className="px-6 py-3 rounded-full btn-primary font-semibold"
             >
-              Register (Coming Soon)
-            </button>
+              Register
+            </a>
           </GlassCard>
         </EventSection>
       </div>
