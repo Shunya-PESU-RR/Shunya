@@ -8,22 +8,22 @@ import { usePageMeta } from "../hooks/usePageMeta";
 
 const timeline: TimelineItemData[] = [
   {
-    period: "Apr 1-7",
+    period: "Apr 1-9",
     title: "Registrations",
     description: "Teams of 2-4 register and submit their initial pitch."
   },
   {
-    period: "Apr 6",
+    period: "Apr 10",
     title: "Shortlist Announcement",
     description: "Top 40 teams move forward based on idea quality and clarity."
   },
   {
-    period: "Apr 8-9",
+    period: "Apr 11-12",
     title: "Development Phase",
     description: "Repository monitoring, mentor check-ins, and eliminations narrow the field to Top 10."
   },
   {
-    period: "Apr 12",
+    period: "Apr 15",
     title: "Finals and Prizes",
     description: "Final presentations, talks, and awards ceremony."
   }
