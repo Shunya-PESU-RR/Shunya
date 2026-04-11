@@ -13,14 +13,14 @@ const timeline: TimelineItemData[] = [
     description: "Teams of 2-4 register and submit their initial pitch."
   },
   {
-    period: "Apr 10",
-    title: "Shortlist Announcement",
-    description: "Top 40 teams move forward based on idea quality and clarity."
-  },
-  {
     period: "Apr 11-12",
     title: "Development Phase",
-    description: "Repository monitoring, mentor check-ins, and eliminations narrow the field to Top 10."
+    description: "Repository monitoring, mentor check-ins, and eliminations narrow the field to Top 9."
+  },
+  {
+    period: "Apr 13",
+    title: "Announcement of Shortlisted Teams",
+    description: "Announcement of the top 9 teams selected for the finals."
   },
   {
     period: "Apr 15",
@@ -156,11 +156,6 @@ export default function Arithemania() {
                 <TimelineItem key={item.title} item={item} index={index} />
               ))}
             </div>
-          </div>
-          <div className="mt-12 p-6 md:p-8 rounded-2xl bg-red-500/10 border border-red-500/20 text-center shadow-[0_0_30px_rgba(239,68,68,0.15)]">
-            <p className="text-2xl md:text-3xl font-black text-red-500 uppercase tracking-widest drop-shadow-md">
-              Disclaimer: Dates are subject to change.
-            </p>
           </div>
         </EventSection>
 
