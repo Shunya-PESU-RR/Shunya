@@ -32,7 +32,7 @@ export default function Home() {
             transition={{ delay: 0.5 }}
             className="mb-4 md:mb-6 inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full glass-panel text-xs md:text-sm font-medium text-[#0070f3] dark:text-[#0070f3] animate-float"
           >
-            Arithemania 2026 is coming soon.
+            Arithemania 2026 is live!
           </motion.div>
 
           <Logo />
