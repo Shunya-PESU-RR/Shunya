@@ -26,15 +26,6 @@ export default function Home() {
         </Suspense>
 
         <div className="relative z-10 max-w-4xl mx-auto w-full">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.5 }}
-            className="mb-4 md:mb-6 inline-block px-3 md:px-4 py-1 md:py-1.5 rounded-full glass-panel text-xs md:text-sm font-medium text-[#0070f3] dark:text-[#0070f3] animate-float"
-          >
-            Arithemania 2026 is live!
-          </motion.div>
-
           <Logo />
 
           <div className="h-12 md:h-16 mb-8 md:mb-12 flex items-center justify-center px-4">
