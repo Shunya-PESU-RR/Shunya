@@ -95,12 +95,6 @@ export default function Arithemania() {
             </p>
 
             <div className="mt-8 flex flex-col sm:flex-row gap-3">
-              <a
-                href="#register"
-                className="px-6 py-3 rounded-full btn-primary font-semibold text-base"
-              >
-                Register Interest
-              </a>
               <Link
                 to="/events"
                 className="px-6 py-3 rounded-full btn-outline font-semibold text-base"
@@ -201,14 +195,6 @@ export default function Arithemania() {
                 We will share the official registration link here as soon as entries open.
               </p>
             </div>
-            <a
-              href="https://unstop.com/o/DYUqtQT?lb=iMI5xbZr&utm_medium=Share&utm_source=shunymat51684&utm_campaign=Online_coding_challenge"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="px-6 py-3 rounded-full btn-primary font-semibold"
-            >
-              Register
-            </a>
           </GlassCard>
         </EventSection>
       </div>
