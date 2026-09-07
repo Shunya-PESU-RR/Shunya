@@ -13,7 +13,7 @@ const VoidScene = lazy(() => import("../visuals/VoidScene"));
 export default function Home() {
   usePageMeta({
     title: "SHUNYA | Official Mathematics Club of PES University Bengaluru",
-    description: "SHUNYA is the official mathematics club of PES University, Bengaluru. Arithemania 2026 — our flagship national mathematics hackathon — is coming April 2026.",
+    description: "SHUNYA is the official mathematics club of PES University, Bengaluru. A space for mathematics, logic, exploration, and hackathons.",
     path: "/"
   });
 
@@ -94,12 +94,14 @@ export default function Home() {
           </div>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
-            <GlassCard className="group cursor-pointer">
-              <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={400} height={192} />
-              <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Upcoming • April 6-11, 2026</div>
-              <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2026</h3>
-              <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.</p>
-            </GlassCard>
+            <Link to="/events/arithemania" className="block">
+              <GlassCard className="group cursor-pointer h-full">
+                <img src="/events/arithemania_2026.png" alt="Arithemania 2026" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={400} height={192} />
+                <div className="text-xs md:text-sm text-[#0070f3] font-medium mb-2">Hackathon • April 6-11, 2026</div>
+                <h3 className="text-lg md:text-xl font-bold mb-2">Arithemania 2026</h3>
+                <p className="text-muted text-xs md:text-sm">Our flagship mathematics hackathon. 1 full week of intense problem solving, algorithm design, and mathematical modeling.</p>
+              </GlassCard>
+            </Link>
 
             <GlassCard className="group cursor-pointer">
               <img src="/events/kalari-4.0.jpg" alt="Kalari 4.0" className="h-40 md:h-48 w-full rounded-xl object-cover mb-4 md:mb-6 group-hover:scale-[1.02] transition-transform duration-500" loading="lazy" width={400} height={192} />

@@ -184,16 +184,34 @@ export default function Arithemania() {
 
         <EventSection
           id="register"
-          eyebrow="Get Involved"
-          title="Ready to Pitch?"
-          subtitle="Registrations open soon. Start aligning your team and preparing your idea now."
+          eyebrow="Stay Connected"
+          title="Edition Concluded"
+          subtitle="Arithemania 5.0 has wrapped up! Follow our socials to stay tuned for future hackathons and announcements."
         >
           <GlassCard className="p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl font-bold mb-2">Register for Arithemania 5.0</h3>
+              <h3 className="text-2xl font-bold mb-2">Looking forward to the next edition?</h3>
               <p className="text-muted text-sm md:text-base">
-                We will share the official registration link here as soon as entries open.
+                Follow our official channels on LinkedIn and Instagram for problem statements, highlights, and upcoming editions.
               </p>
+            </div>
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.instagram.com/shunya_pes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 rounded-full btn-outline font-medium text-sm"
+              >
+                Instagram
+              </a>
+              <a
+                href="https://www.linkedin.com/company/shunya-pes/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-5 py-2.5 rounded-full btn-primary font-medium text-sm"
+              >
+                LinkedIn
+              </a>
             </div>
           </GlassCard>
         </EventSection>
