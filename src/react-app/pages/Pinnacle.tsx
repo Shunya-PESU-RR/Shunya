@@ -46,7 +46,7 @@ const highlights = [
   "Open to all passionate mathematics and problem-solving enthusiasts at PES University.",
   "Designed to test logical depth, mathematical accuracy, and strategic decision-making.",
   "Participants are encouraged to bring their sharpest analytical skills and adaptability under pressure.",
-  "Detailed schedule and registration instructions will be announced shortly."
+  "Register online using the official registration link to secure your participation."
 ];
 
 export default function Pinnacle() {
@@ -73,7 +73,7 @@ export default function Pinnacle() {
                 Mathematics Competition
               </span>
               <span className="px-3 py-1 rounded-full text-xs font-semibold uppercase tracking-[0.2em] bg-[#7928ca]/10 text-[#7928ca]">
-                Coming Soon
+                Registrations Open
               </span>
             </div>
 
@@ -101,14 +101,14 @@ export default function Pinnacle() {
               >
                 Back to Events
               </Link>
-              <button
-                type="button"
-                disabled
-                aria-disabled="true"
-                className="px-6 py-3 rounded-full btn-primary font-semibold text-base opacity-75 cursor-not-allowed text-center"
+              <a
+                href="https://forms.gle/fTKy9ZQkJHQtkUH39"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-3 rounded-full btn-primary font-semibold text-base text-center inline-block"
               >
-                Registrations Coming Soon
-              </button>
+                Register Now
+              </a>
             </div>
           </motion.div>
         </section>
@@ -172,21 +172,29 @@ export default function Pinnacle() {
           </div>
         </EventSection>
 
-        {/* Stay Connected CTA */}
+        {/* Registration CTA */}
         <EventSection
           id="register"
-          eyebrow="Stay Connected"
-          title="Registrations Coming Soon"
-          subtitle="Registrations for Pinnacle 3.0 will open shortly. Follow our official channels for the announcement."
+          eyebrow="Registration"
+          title="Register for Pinnacle 3.0"
+          subtitle="Registrations for Pinnacle 3.0 are now open. Fill out the official form to participate."
         >
           <GlassCard className="p-8 md:p-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
             <div>
-              <h3 className="text-2xl font-bold mb-2">Be the first to register</h3>
+              <h3 className="text-2xl font-bold mb-2">Secure Your Spot</h3>
               <p className="text-muted text-sm md:text-base">
-                Follow Shunya on LinkedIn and Instagram for upcoming event releases, venue announcements, and registration links.
+                Click below to register for Pinnacle 3.0 via the official Google Form.
               </p>
             </div>
-            <div className="flex items-center gap-3">
+            <div className="flex flex-wrap items-center gap-3">
+              <a
+                href="https://forms.gle/fTKy9ZQkJHQtkUH39"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-6 py-2.5 rounded-full btn-primary font-semibold text-sm inline-block"
+              >
+                Register via Google Form
+              </a>
               <a
                 href="https://www.instagram.com/shunya_pes/"
                 target="_blank"
@@ -199,7 +207,7 @@ export default function Pinnacle() {
                 href="https://www.linkedin.com/company/shunya-pes/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-5 py-2.5 rounded-full btn-primary font-medium text-sm"
+                className="px-5 py-2.5 rounded-full btn-outline font-medium text-sm"
               >
                 LinkedIn
               </a>
