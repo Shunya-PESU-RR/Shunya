@@ -12,18 +12,24 @@ export default function Events() {
     path: "/events"
   });
 
-  const upcomingEvents = [
+  const upcomingEvents: {
+    title: string;
+    date: string;
+    description: string;
+    type: 'hackathon' | 'workshop' | 'talk' | 'math event';
+    image: string;
+    link?: string;
+  }[] = [];
+
+  const pastEvents = [
     {
       title: "Pinnacle 3.0",
       date: "September 30, 2026",
       description: "An engaging mathematics-based competitive event focused on problem-solving, strategic thinking, and accuracy under pressure.",
       type: "math event" as const,
-      image: "/events/Pinnacle%203.0.jpeg",
+      image: "/events/Pinnacle%203.0/Pinnacle%203.0.jpeg",
       link: "/events/pinnacle3.0"
-    }
-  ];
-
-  const pastEvents = [
+    },
     {
       title: "Arithemania 2026",
       date: "April 6-11, 2026",
