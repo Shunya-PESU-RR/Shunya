@@ -4,7 +4,7 @@ import PageLayout from "../components/PageLayout";
 import GlassCard from "../components/GlassCard";
 import EventSection from "../components/events/arithemania/EventSection";
 import { usePageMeta } from "../hooks/usePageMeta";
-import { Trophy, Sparkles } from "lucide-react";
+import { Trophy } from "lucide-react";
 
 const pillars = [
   {
@@ -121,9 +121,13 @@ export default function Pinnacle() {
           subtitle="A huge congratulations to the brilliant minds who took on the challenge and emerged victorious at Pinnacle 3.0!"
         >
           <GlassCard className="p-6 md:p-8 border-amber-500/30 shadow-2xl shadow-amber-500/5 overflow-hidden">
-            <div className="flex items-center gap-3 mb-6">
-              <div className="p-2.5 rounded-2xl bg-amber-500/10 text-amber-500">
-                <Trophy size={28} />
+            <div className="flex items-center gap-3.5 mb-6">
+              <div className="w-12 h-12 rounded-2xl overflow-hidden border border-white/10 shadow-lg flex-shrink-0 bg-black/40">
+                <img
+                  src="/assets/shunya_logo.jpg"
+                  alt="SHUNYA Logo"
+                  className="w-full h-full object-cover rounded-2xl"
+                />
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-gradient">Pinnacle 3.0 Champions</h3>
@@ -140,13 +144,10 @@ export default function Pinnacle() {
               />
             </div>
 
-            <div className="p-4 md:p-6 rounded-2xl bg-white/[0.03] border border-white/5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <Sparkles className="text-amber-400 shrink-0" size={24} />
-                <p className="text-sm md:text-base text-muted">
-                  Kudos to all participating teams for displaying extraordinary mathematical intuition, speed, and analytical rigor throughout the competition!
-                </p>
-              </div>
+            <div className="p-4 md:p-6 rounded-2xl bg-white/[0.03] border border-white/5">
+              <p className="text-sm md:text-base text-muted text-center sm:text-left">
+                Kudos to all participating teams for displaying extraordinary mathematical intuition, speed, and analytical rigor throughout the competition!
+              </p>
             </div>
           </GlassCard>
         </EventSection>
